@@ -1,11 +1,13 @@
 import React from "react";
 
 function Tickler() {
-  function tickle() {
-    console.log("Teehee!");
-  }
+    const myConst = "Teehee!";
+    function tickle(e) {
+        console.log(myConst);
+        console.log({"e.target": e.target, "e.clientX": e.clientX});
+    }
 
-  return <button>Tickle me!</button>;
+    return <button onClick={tickle}>Tickle me!</button>;
 }
 
 export default Tickler;
